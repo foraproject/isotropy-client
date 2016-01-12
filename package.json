@@ -1,0 +1,34 @@
+{
+    "author": "Jeswin Kumar <jeswinpk@agilehead.com>",
+    "name": "isotropy-client-mode",
+    "version": "0.0.2",
+    "description": "Loader for Isotropy applications (Client-side).",
+    "scripts": {
+        "test": "mocha dist/test/test.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jeswin/isotropy-client-mode.git"
+    },
+    "main": "dist/isotropy-client-mode",
+    "license": "MIT",
+    "dependencies": {
+        "isotropy-core": "*",
+        "isotropy-plugin-react": "*",
+        "isotropy-adapter-react-browser": "*",
+        "isotropy-koa-in-browser": "*"
+    },
+    "devDependencies": {
+        "babel-polyfill": "*",
+        "babel-preset-es2015": "*",
+        "babel-preset-react": "*",
+        "babel-preset-stage-2": "*",
+        "babel-plugin-transform-class-properties": "*",
+        "babel-relay-plugin-loader": "*",
+        "json-loader": "*",
+        "mocha": "*",
+        "should": "*"
+    },
+    "keywords": ["isotropy", "isomorphic"],
+    "license" : "MIT"
+}
