@@ -7,8 +7,8 @@ module.exports = {
     },
     resolve: {
         alias: {
-    		"isotropy-adapter-react": "isotropy-adapter-react-browser",
-            "koa": "isotropy-koa-in-browser"
+    		    "isotropy-adapter-react": "isotropy-adapter-react-browser",
+            "koa": "isotropy-koa-lite-in-browser"
         }
 	},
     module: {
