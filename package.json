@@ -10,7 +10,7 @@
         "type": "git",
         "url": "https://github.com/jeswin/isotropy-client-mode.git"
     },
-    "main": "dist/isotropy-client-mode",
+    "main": "dist/isotropy-client",
     "license": "MIT",
     "dependencies": {
         "isotropy-core": "*",
