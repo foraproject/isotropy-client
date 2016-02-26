@@ -2,6 +2,7 @@
 import type { KoaType } from "./flow/koa";
 import getIsotropy from "isotropy-core";
 import reactPlugin from "isotropy-plugin-react";
+import webappPlugin from "isotropy-plugin-webapp";
 
 type Plugin = {
     getDefaults: (app: Object) => Object,
@@ -31,6 +32,6 @@ export type IsotropyResultType = {
 
 type IsotropyFnType = (apps: Object, options: IsotropyOptionsType) => Promise<IsotropyResultType>;
 
-const isotropy: IsotropyFnType = getIsotropy({ react: reactPlugin });
+const isotropy: IsotropyFnType = getIsotropy({ react: reactPlugin, webapp: webappPlugin });
 
 export default isotropy;
