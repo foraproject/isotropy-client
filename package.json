@@ -1,6 +1,6 @@
 {
     "author": "Jeswin Kumar <jeswinpk@agilehead.com>",
-    "name": "isotropy-client-mode",
+    "name": "isotropy-in-dom",
     "version": "0.0.2",
     "description": "Loader for Isotropy applications (Client-side).",
     "scripts": {
@@ -8,9 +8,9 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/jeswin/isotropy-client-mode.git"
+        "url": "https://github.com/jeswin/isotropy-in-app-mode.git"
     },
-    "main": "dist/isotropy-client",
+    "main": "dist/isotropy-in-app",
     "license": "MIT",
     "dependencies": {
         "isotropy-core": "*",
