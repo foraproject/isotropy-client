@@ -1,5 +1,4 @@
 /* @flow */
-import type { KoaType } from "./flow/koa";
 import getIsotropy from "isotropy-core";
 import reactPlugin from "isotropy-plugin-react";
 import webappPlugin from "isotropy-plugin-webapp";
