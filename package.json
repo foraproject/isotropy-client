@@ -8,9 +8,9 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/jeswin/isotropy-in-app-mode.git"
+        "url": "https://github.com/jeswin/isotropy-in-dom-mode.git"
     },
-    "main": "dist/isotropy-in-app",
+    "main": "dist/isotropy-in-dom",
     "license": "MIT",
     "dependencies": {
         "isotropy-core": "*",
