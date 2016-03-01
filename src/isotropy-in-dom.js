@@ -1,36 +1,21 @@
 /* @flow */
+import http from "isotropy-http-in-browser";
 import getIsotropy from "isotropy-core";
-import reactPlugin from "isotropy-plugin-react";
-import webappPlugin from "isotropy-plugin-webapp";
-
-type Plugin = {
-    getDefaults: (app: Object) => Object,
-    setup: (appSettings: Object, instance: KoaType, options: PluginOptions) => Promise
-};
-
-type Plugins = {
-    [key: string]: Plugin
-}
-
-type PluginOptions = {
-    dir: string,
-    port: number,
-    graphiql?: boolean
-}
-
-type IsotropyOptionsType = {
-    dir: string,
-    port: number,
-    plugins: Plugins,
-    defaultInstance: KoaType
-};
-
-export type IsotropyResultType = {
-    koa: KoaType
-};
+import urlMiddleware from "isotropy-middleware-url";
+import Router from "isotropy-router";
+import type { PluginType } from "isotropy-core";
+import type { IsotropyOptionsType, IsotropyResultType } from "isotropy-core";
+import type { IncomingMessage, ServerResponse, Server } from "./flow/http";
 
 type IsotropyFnType = (apps: Object, options: IsotropyOptionsType) => Promise<IsotropyResultType>;
 
-const isotropy: IsotropyFnType = getIsotropy({ react: reactPlugin, webapp: webappPlugin });
+export default async function(apps: Object, plugins: Array<PluginType>, options: IsotropyOptionsType) : Promise<IsotropyResultType> {
+  const isotropy: IsotropyFnType = getIsotropy(plugins, http);
 
-export default isotropy;
+  options.handler = (router: Router) => (req: IncomingMessage, res: ServerResponse) => {
+    urlMiddleware(req, res)
+    .then(() => router.doRouting(req, res));
+  };
+
+  return await isotropy(apps, options);
+};

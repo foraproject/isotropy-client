@@ -1,7 +1,7 @@
 {
     "author": "Jeswin Kumar <jeswinpk@agilehead.com>",
     "name": "isotropy-in-dom",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Loader for Isotropy applications (Client-side).",
     "scripts": {
         "test": "mocha dist/test/test.js"
@@ -14,10 +14,14 @@
     "license": "MIT",
     "dependencies": {
         "isotropy-core": "*",
-        "isotropy-plugin-react": "*",
-        "isotropy-adapter-react-browser": "*"
+        "isotropy-http-in-browser": "*",
+        "isotropy-middleware-url": "*",
+        "isotropy-router": "*"
     },
     "devDependencies": {
+        "jsdom": "*",
+        "isotropy-plugin-webapp": "*",
+        "isotropy-plugin-react": "*",
         "babel-polyfill": "*",
         "babel-preset-es2015": "*",
         "babel-preset-react": "*",
