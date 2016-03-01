@@ -1,14 +1,14 @@
 module.exports = {
     context: __dirname,
-    entry: "./dist/test/app-browser.js",
+    entry: "./dist/test/loader.js",
     output: {
         path: __dirname + "/dist",
         filename: "bundle.js"
     },
     resolve: {
         alias: {
-    		    "isotropy-adapter-react": "isotropy-adapter-react-browser",
-            "koa": "isotropy-koa-lite-in-browser"
+          "http": "isotropy-http-in-browser",
+    		  "isotropy-adapter-webapp": "isotropy-adapter-webapp-in-dom"
         }
 	},
     module: {
