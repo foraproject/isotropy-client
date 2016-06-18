@@ -1,14 +1,14 @@
 {
     "author": "Jeswin Kumar <jeswinpk@agilehead.com>",
     "name": "isotropy-in-dom",
-    "version": "0.0.6",
+    "version": "0.0.8",
     "description": "Loader for Isotropy applications (Client-side).",
     "scripts": {
         "test": "mocha dist/test/test.js"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/nodejam/isotropy-in-dom-mode.git"
+        "url": "https://github.com/jeswin/isotropy-in-dom-mode.git"
     },
     "main": "dist/isotropy-in-dom",
     "license": "MIT",
